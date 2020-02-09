@@ -9,5 +9,6 @@
         "targets": "> .5%, last 2 versions, not dead"
       }
     ]
-  ]
+  ],
+  "plugins": ["@babel/plugin-syntax-dynamic-import"]
 }
