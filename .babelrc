@@ -5,8 +5,7 @@
       {
         "debug": true,
         "useBuiltIns": "usage",
-        "corejs": 3,
-        "targets": "> .5%, last 2 versions, not dead"
+        "corejs": 3
       }
     ]
   ],
