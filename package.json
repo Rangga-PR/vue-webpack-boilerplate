@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "prod": "webpack-dev-server --config webpack.prod.js --open --hot --port 8080",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],

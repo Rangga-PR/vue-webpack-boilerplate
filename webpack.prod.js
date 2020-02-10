@@ -11,7 +11,7 @@ const merge = require("webpack-merge");
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: "[name]-[contentHash].js",
+    filename: "[name]-[hash].js",
     path: path.resolve(__dirname, "dist"),
   },
   devtool: "source-map",
@@ -30,7 +30,7 @@ module.exports = merge(common, {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name]-[contentHash].css",
+      filename: "[name]-[hash].css",
     }),
     new CleanWebpackPlugin(),
   ],
@@ -57,6 +57,7 @@ module.exports = merge(common, {
       new OptimizeCssAssetsPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
+        title: "vue app",
         template: "./src/index.html",
         minify: {
           collapseWhitespace: true,
