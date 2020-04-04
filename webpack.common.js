@@ -1,5 +1,3 @@
-const path = require("path");
-
 module.exports = {
   entry: {
     app: "./src/index.js",
@@ -24,7 +22,19 @@ module.exports = {
           loader: "file-loader",
           options: {
             name: "[name]-[hash].[ext]",
-            outputPath: path.resolve(__dirname, "dist/assets/imgs"),
+            esModule: false,
+            outputPath: "dist/assets/img",
+          },
+        },
+      },
+      {
+        test: /\.(otf|ttf|woff2|woff)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name]-[hash].[ext]",
+            esModule: false,
+            outputPath: "dist/assets/font",
           },
         },
       },
