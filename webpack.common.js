@@ -23,7 +23,7 @@ module.exports = {
           options: {
             name: "[name]-[hash].[ext]",
             esModule: false,
-            outputPath: "dist/assets/img",
+            outputPath: "assets/img",
           },
         },
       },
@@ -34,7 +34,7 @@ module.exports = {
           options: {
             name: "[name]-[hash].[ext]",
             esModule: false,
-            outputPath: "dist/assets/font",
+            outputPath: "assets/font",
           },
         },
       },
