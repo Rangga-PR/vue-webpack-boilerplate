@@ -1,5 +1,11 @@
+const purgecss = require("@fullhuman/postcss-purgecss");
+const autoprefixer = require("autoprefixer");
+
 module.exports = {
-  plugins: {
-    autoprefixer: { grid: "true" },
-  },
+  plugins: [
+    purgecss({
+      content: ["./src/**/*.vue", "./src/**/*.html", "./src/**/*.js"],
+    }),
+    autoprefixer({ grid: true }),
+  ],
 };
